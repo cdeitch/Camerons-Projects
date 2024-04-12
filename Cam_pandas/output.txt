@@ -1,0 +1,109 @@
+       year  month  day  dep_time  dep_delay  arr_time  arr_delay carrier  \
+0      2013      6   30       940       15.0      1216         -4      VX   
+1      2013      5    7      1657       -3.0      2104         10      DL   
+2      2013     12    8       859       -1.0      1238         11      DL   
+3      2013      5   14      1841       -4.0      2122        -34      DL   
+5      2013      1    1      1817       -3.0      2008          3      AA   
+...     ...    ...  ...       ...        ...       ...        ...     ...   
+32720  2013      4   17      1023       -7.0      1341        -24      VX   
+32722  2013      7    9       600        0.0       822         -8      AA   
+32726  2013      2    4      1558       -2.0      1854          4      DL   
+32731  2013      7    7       812       -3.0      1043          8      DL   
+32732  2013      9    3      1057       -1.0      1319        -19      UA   
+
+      tailnum  flight origin dest  air_time  distance  hour  minute  
+0      N626VA     407    JFK  LAX       313    2475.0     9      40  
+1      N3760C     329    JFK  SJU       216    1598.0    16      57  
+2      N712TW     422    JFK  LAX       376    2475.0     8      59  
+3      N914DL    2391    JFK  TPA       135    1005.0    18      41  
+5      N3AXAA     353    LGA  ORD       138     733.0    18      17  
+...       ...     ...    ...  ...       ...       ...   ...     ...  
+32720  N842VA     187    EWR  SFO       351    2565.0    10      23  
+32722  N3ERAA     707    LGA  DFW       178    1389.0     6       0  
+32726  N3737C    1331    JFK  DEN       238    1626.0    15      58  
+32731  N6713Y    1429    JFK  LAS       286    2248.0     8      12  
+32732  N77871    1545    EWR  IAH       180    1400.0    10      57  
+
+[17839 rows x 16 columns]
+
+       arr_delay  dep_time tailnum dest  arr_time  dep_delay
+0             -4       940  N626VA  LAX      1216       15.0
+1             10      1657  N3760C  SJU      2104       -3.0
+2             11       859  N712TW  LAX      1238       -1.0
+3            -34      1841  N914DL  TPA      2122       -4.0
+4             -8      1102  N823AY  ORF      1230       -3.0
+...          ...       ...     ...  ...       ...        ...
+32730        -28       752  N8505Q  PIT       921       -8.0
+32731          8       812  N6713Y  LAS      1043       -3.0
+32732        -19      1057  N77871  IAH      1319       -1.0
+32733         60       844  N258JB  CHS      1045       56.0
+32734        -23      1813  N36272  CLE      1942       -3.0
+
+[32735 rows x 6 columns]
+
+       arr_delay  dep_time tailnum dest  arr_time  dep_delay  total_delay
+0             -4       940  N626VA  LAX      1216       15.0         11.0
+1             10      1657  N3760C  SJU      2104       -3.0          7.0
+2             11       859  N712TW  LAX      1238       -1.0         10.0
+3            -34      1841  N914DL  TPA      2122       -4.0        -38.0
+4             -8      1102  N823AY  ORF      1230       -3.0        -11.0
+...          ...       ...     ...  ...       ...        ...          ...
+32730        -28       752  N8505Q  PIT       921       -8.0        -36.0
+32731          8       812  N6713Y  LAS      1043       -3.0          5.0
+32732        -19      1057  N77871  IAH      1319       -1.0        -20.0
+32733         60       844  N258JB  CHS      1045       56.0        116.0
+32734        -23      1813  N36272  CLE      1942       -3.0        -26.0
+
+[32735 rows x 7 columns]
+
+         air_time  distance
+month                      
+1      152.026054    4983.0
+2      149.713911    4983.0
+3      151.598466    4983.0
+4      152.737864    4983.0
+5      147.203474    4983.0
+6      147.172035    4983.0
+7      147.390956    4983.0
+8      146.139583    4983.0
+9      145.423349    4983.0
+10     145.775312    4983.0
+11     158.226857    4983.0
+12     162.330265    4983.0
+
+     age  Medu  Fedu  traveltime  studytime  failures  famrel  freetime  \
+0     18     4     4           2          2         0       4         3   
+1     17     1     1           1          2         0       5         3   
+2     15     1     1           1          2         0       4         3   
+3     15     4     2           1          3         0       3         2   
+4     16     3     3           1          2         0       4         3   
+..   ...   ...   ...         ...        ...       ...     ...       ...   
+644   19     2     3           1          3         1       5         4   
+645   18     3     1           1          2         0       4         3   
+646   18     1     1           2          2         0       1         1   
+647   17     3     1           2          1         0       2         4   
+648   18     3     2           3          1         0       4         4   
+
+     goout  Dalc  Walc  health  absences  G1  G2  G3  
+0        4     1     1       3         4   0  11  11  
+1        3     1     1       3         2   9  11  11  
+2        2     2     3       3         6  12  13  12  
+3        2     1     1       5         0  14  14  14  
+4        2     1     2       5         0  11  13  13  
+..     ...   ...   ...     ...       ...  ..  ..  ..  
+644      2     1     2       5         4  10  11  10  
+645      4     1     1       1         4  15  15  16  
+646      1     1     1       5         6  11  12   9  
+647      5     3     4       2         6  10  10  10  
+648      1     3     4       5         4  10  11  11  
+
+[649 rows x 16 columns]
+
+coeficient of determination between study time and G1: 0.06805596405355119
+coeficient of determination between study time and G2: 0.05783928756147938
+
+coeficient of determination between absences and G1: 0.021652899351715327
+coeficient of determination between absences and G2: 0.015561298426790882
+
+coeficient of determination between study time, absences and G3: 0.06626876503146739
+coeficient of determination between all features and G3: 0.25551725076491816
